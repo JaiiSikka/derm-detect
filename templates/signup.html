@@ -94,7 +94,7 @@
         }
 
         form {
-            height: 575px;
+            height: 625px;
             width: 400px;
             background-color: rgba(255, 255, 255, 0.13);
             position: absolute;
@@ -155,6 +155,12 @@
             font-weight: 600;
             border-radius: 5px;
             cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #392319;
+            color: #fff;
         }
 
         .social {
@@ -225,15 +231,20 @@
         <h3>Sign up Here</h3>
 
         <label for="username">Name</label>
-        <input type="text" placeholder="Enter your name here" id="name" name="name">
+        <input type="text" placeholder="Full Name" id="name" name="name">
 
         <label for="username">Email</label>
-        <input type="email" placeholder="Enter your email here" id="email" name="email">
+        <input type="email" placeholder="example@domain.com" id="email" name="email">
 
         <label for="password">Password</label>
-        <input type="password" placeholder="Enter your password here" id="password" name="password">
+        <input type="password" placeholder="Must have atleast 6 letters" id="password" name="password">
 
         <button>Sign Up</button>
+
+        <p style="text-align: center; margin-top: 25px; font-size: 12px;">
+            By Signing Up, you agree to our <a href="#">Terms of Use</a> and
+            <a href="#">Privacy Policy</a>.
+        </p>
 
         {% if error %}
         <p style="color: red;

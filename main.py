@@ -91,7 +91,9 @@ def login():
         try:
             user = auth.sign_in_with_email_and_password(email, password)
             session.update({"user": user})
-            return redirect("/")
+            return render_template(
+                "index.html", session=session, success="Login successful"
+            )
         except Exception as e:
             return render_template("login.html", error=e.args[1].split(":")[3])
 
